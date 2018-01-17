@@ -17,6 +17,11 @@ namespace xadrez_console
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
             Console.WriteLine("Jogador Atual: " + partida.jogadorAtual);
+
+            if (partida.xeque)
+            {
+                Console.WriteLine("XEQUE!");
+            }
         }
 
 
@@ -31,7 +36,7 @@ namespace xadrez_console
 
             Console.WriteLine();
             Console.Write("Preta: ");
-            imprimirConjunto(partida.pecasCapturadas(Cor.Preta));            
+            imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
 
             Console.ForegroundColor = aux;
             Console.WriteLine();
@@ -55,7 +60,7 @@ namespace xadrez_console
                 Console.Write(8 - i + " ");
 
                 for (int j = 0; j < tabuleiro.colunas; j++)
-                {   
+                {
                     imprimirPeca(tabuleiro.peca(i, j));
                 }
                 Console.WriteLine();
