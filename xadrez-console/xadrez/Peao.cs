@@ -35,7 +35,7 @@ namespace xadrez {
                 }
                 pos.definirValores(posicao.linha - 2, posicao.coluna);
                 Posicao p2 = new Posicao(posicao.linha - 1, posicao.coluna);
-                if (tabuleiro.posicaoValida(p2) && livre(p2) && tabuleiro.posicaoValida(pos) && livre(pos) && qteMovimentos == 0) {
+                if (tabuleiro.posicaoValida(p2) && livre(p2) && tabuleiro.posicaoValida(pos) && livre(pos) && qtdMovimentos == 0) {
                     mat[pos.linha, pos.coluna] = true;
                 }
                 pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
@@ -66,7 +66,7 @@ namespace xadrez {
                 }
                 pos.definirValores(posicao.linha + 2, posicao.coluna);
                 Posicao p2 = new Posicao(posicao.linha + 1, posicao.coluna);
-                if (tabuleiro.posicaoValida(p2) && livre(p2) && tabuleiro.posicaoValida(pos) && livre(pos) && qteMovimentos == 0) {
+                if (tabuleiro.posicaoValida(p2) && livre(p2) && tabuleiro.posicaoValida(pos) && livre(pos) && qtdMovimentos == 0) {
                     mat[pos.linha, pos.coluna] = true;
                 }
                 pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
